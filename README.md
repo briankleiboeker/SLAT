@@ -5,8 +5,10 @@
 
 ![image](abstract.jpg)
 
-To use SLAT, see the below demonstrations:
+To use SLAT to assign lipid structure to a single elemental composition:
 
 ![single composition](single_comp_demo.gif)
 
-For muliple compositions:
+For muliple elemenal compositions:
+
+![multiple compositions](bulk_comps_demo.gif)
