@@ -5,3 +5,8 @@
 
 ![image](abstract.jpg)
 
+To use SLAT, see the below demonstrations:
+
+![single composition](single_comp_demo.gif)
+
+For muliple compositions:
