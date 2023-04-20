@@ -15,4 +15,4 @@ For muliple elemental compositions (a test dataset is available in this reposito
 
 ## Change log ##
 * v1.0.0 Release SLAT
-* v1.0.1 Add exact structure database. SLAT now returns most likely exact structures for over 200 general structures. The exact structure database is based on hundreds of MS2 and MS3 analyses of lipids from various tissues and cell lines.
+* v1.0.1 Add exact structure database. SLAT now returns most likely exact structure(s) for over 200 general structures. The exact structure database is based on hundreds of MS2 and MS3 analyses of lipids from various tissues and cell lines.
