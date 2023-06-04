@@ -5,8 +5,10 @@
 
 For high-throughput, offline, or comparative analyses, check out the associated R package, [slatR](https://github.com/briankleiboeker/slatR).
 ![abstract](https://github.com/briankleiboeker/SLAT/assets/59810795/44ae5690-83a4-4fce-b2ef-f977d0e358bb)
-To use SLAT to assign lipid structure to a single elemental composition:
-https://youtu.be/FBKgMt7WbcY
+
+
+[![To use SLAT to assign lipid structure to a single elemental composition:](http://img.youtube.com/vi/FBKgMt7WbcY/0.jpg)](https://youtu.be/FBKgMt7WbcY "Video Title")
+
 
 For muliple elemental compositions (a test dataset is available in this repository):
 https://youtu.be/Bjx4WziZP0c
