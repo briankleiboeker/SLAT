@@ -3,7 +3,7 @@
 
 [This webapp](https://lodhilab.shinyapps.io/slat/) was designed for use with high-resolution Orbitrap ESI-MS data with the goal of accurately assigining lipid class and structure to user-provided elemental compositions, but should also be compatible with most any mass spectromerty data so long as the elemental compositions and column names are provided in a standard format. 
 
-For high-throughput or offline analyses, checkout the associated R package, [slatR](https://github.com/briankleiboeker/slatR).
+For high-throughput, offline, or comparative analyses, check out the associated R package, [slatR](https://github.com/briankleiboeker/slatR).
 
 ![image](abstract.jpg)
 
