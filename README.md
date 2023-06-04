@@ -6,12 +6,13 @@
 For high-throughput, offline, or comparative analyses, check out the associated R package, [slatR](https://github.com/briankleiboeker/slatR).
 ![abstract](https://github.com/briankleiboeker/SLAT/assets/59810795/44ae5690-83a4-4fce-b2ef-f977d0e358bb)
 To use SLAT to assign lipid structure to a single elemental composition:
-
-![single composition](single_comp_demo.gif)
+https://youtu.be/FBKgMt7WbcY
 
 For muliple elemental compositions (a test dataset is available in this repository):
+https://youtu.be/Bjx4WziZP0c
 
-![multiple compositions](bulk_comps_demo.gif)
+To use SLAT to recalibrate raw data:
+https://youtu.be/QjfLFrz4-TA
 
 ## Change log ##
 * v1.0.0 Release SLAT
