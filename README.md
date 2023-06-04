@@ -6,16 +6,20 @@
 For high-throughput, offline, or comparative analyses, check out the associated R package, [slatR](https://github.com/briankleiboeker/slatR).
 ![abstract](https://github.com/briankleiboeker/SLAT/assets/59810795/44ae5690-83a4-4fce-b2ef-f977d0e358bb)
 
+To use SLAT to assign lipid structure to a single elemental composition, see this youtube video:
 
-[![To use SLAT to assign lipid structure to a single elemental composition:](http://img.youtube.com/vi/FBKgMt7WbcY/0.jpg)](https://youtu.be/FBKgMt7WbcY "Video Title")
-
+[![singlecompvid](http://img.youtube.com/vi/FBKgMt7WbcY/0.jpg)](https://youtu.be/FBKgMt7WbcY "Video Title")
 
 For muliple elemental compositions (a test dataset is available in this repository):
-https://youtu.be/Bjx4WziZP0c
+
+[![multicompvid](http://img.youtube.com/vi/Bjx4WziZP0c/0.jpg)](https://youtu.be/Bjx4WziZP0c "Video Title")
 
 To use SLAT to recalibrate raw data:
-https://youtu.be/QjfLFrz4-TA
+
+[![recalibrationvid](http://img.youtube.com/vi/QjfLFrz4-TA/0.jpg)](https://youtu.be/QjfLFrz4-TA "Video Title")
+
 
 ## Change log ##
 * v1.0.0 Release SLAT
 * v1.0.1 Add exact structure database. SLAT now returns most likely exact structure(s) for over 200 general structures. The exact structure database is based on hundreds of MS2 and MS3 analyses of lipids from various tissues and cell lines.
+* v1.0.2 Add ability to assign elemental composition to m/z values and add 3 specific bacterial strains to exact structure database (e.coli, streptococcus, and listeria).
