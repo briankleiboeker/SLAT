@@ -3,6 +3,7 @@ library(datamods)
 library(DT)
 library(ggplot2)
 library(rclipboard)
+library(plotly)
 
 #todo: think of ways for user to add new lipid species (temp or permanent)
 
@@ -199,7 +200,9 @@ structure_from_exact_comp <- function(c,h,o,n,p,which_to_look_for,domain,lois,ma
   if(rdb.equiv %% 1 != 0 ){
     return(NA)
   }
-
+  
+  #put an if(strain == "bacteroidetes") here
+  #look for 
   
   if( "acylglycerols" %in% which_to_look_for){
     if(n == 0 && p == 0 && o == 5 && c >= 35){
@@ -488,7 +491,7 @@ structure_from_exact_comp <- function(c,h,o,n,p,which_to_look_for,domain,lois,ma
           
         }
         if(o>=7 && o<=8 ){
-          if((c %% 2) == 0) {
+          if((c %% 2) == 0){
             #PC has 2 rdb , base 8 carbons
             if((o == 8 && rdb.equiv < 2) | (o == 7 && rdb.equiv < 1)| !("pc" %in% lois)){
               return(NA)
@@ -1094,14 +1097,18 @@ ui <- fluidPage(
                                        actionButton("bulk.add_btn", "Add/Update element"),
                                        actionButton("bulk.delete_btn", "Delete element"),
                                        DTOutput("bulk_shiny_table",width = "20%"),
-                                       h1(strong("4. Input data:"), style = "font-size:22.5px;"),
-                                       import_copypaste_ui3("myid2",
-                                                            title = "")
+                                       conditionalPanel(condition = "input.tabsid == 1 && input.transferdata == 'y' ",
+                                                        h1(strong("4. Recalibrated data has been automatically imported from the recalibration tab"), style = "font-size:22.5px;")),
+                                       conditionalPanel(condition = "input.tabsid == 1 && input.transferdata !== 'y' ",
+                                                        h1(strong("4. Input data:"), style = "font-size:22.5px;"),
+                                                        import_copypaste_ui3("myid2",
+                                                                             title = "")
+                                                        )
                                        )
                       ),
                column(
                  width = 4,
-                 conditionalPanel(condition = "input.tabsid == 1  && input.assignmentmode == 'fromcomp'",
+                 conditionalPanel(condition = "input.tabsid == 1 && input.assignmentmode == 'fromcomp'",
                                   h1(strong("5. Preview results:"), style = "font-size:22.5px;"),
                                   tags$b("Import status:"),
                                   htmlOutput(outputId = "status"),
@@ -1111,7 +1118,7 @@ ui <- fluidPage(
                                   verbatimTextOutput(outputId = "data"),
                                   h1(strong("6. Download results:"), style = "font-size:22.5px;"),
                                   downloadButton("download", "Download results")),
-                 conditionalPanel(condition = "input.tabsid == 1  && input.assignmentmode == 'frommz'",
+                 conditionalPanel(condition = "input.tabsid == 1 && input.assignmentmode == 'frommz'",
                                   h1(strong("5. Set tolerance and analyze data:"), style = "font-size:22.5px;"),
                                   splitLayout(
                                     numericInput("bulk.delta.error",
@@ -1146,16 +1153,22 @@ ui <- fluidPage(
                  verbatimTextOutput(outputId = "name3")
                ),
                column(width = 8,
-                      h1(strong("2. Click and drag to zoom in on an m/z range, click a point to select it, or click anywhere to reset"), style = "font-size:22.5px;"),
-                      plotOutput("plot1",
-                                 brush = brushOpts( id = "zoom_brush", resetOnNew = F,opacity = 0),
-                                 click = "plot_click"),
+                      h1(strong("2. Click and drag to zoom in on an m/z range, click a point to select it, or double click to reset"), style = "font-size:22.5px;"),
+                      plotlyOutput("plot1"),
                       h1(strong("3. Input exact theoretical mass of selected points:"), style = "font-size:22.5px;"),
-                      splitLayout(DTOutput("alignment_shiny_table",width = "20%"),
+                      splitLayout(DTOutput("alignment_shiny_table",width = "50%"),
                                   actionButton("alignment_delete_btn", "Delete selected point",icon("trash"),style="color: #FFFFFF; background-color: #FF0000; border-color: #2e6da4; margin-top:25px")),
                       h1(strong("4. Copy or download results:"), style = "font-size:22.5px;"),
                       rclipboardSetup(),
-                      splitLayout(uiOutput("clip"),downloadButton("download3", "Download aligned data"))
+                      splitLayout(radioButtons("transferdata",
+                                               "Transfer recalibrated data to second tab?",
+                                               choices = c("Yes" = "y",
+                                                           "No" = "n"),
+                                               selected = character(0),
+                                               inline = T),
+                                  uiOutput("clip"),
+                                  downloadButton("download3", "Download aligned data")
+                                  )
                       )
              )),
     )
@@ -1163,7 +1176,6 @@ ui <- fluidPage(
 )
 
 server <- function(input, output, session){
-
   observeEvent(input$negionadduct,{
     if("m.plus.chloride" %in% input$negionadduct){
       f.e <- "Cl[35]"
@@ -1512,12 +1524,27 @@ server <- function(input, output, session){
                  }
                },
                ignoreInit = T)
+  observeEvent(tab3data(),{
+    if(!is.null(imported3$status())){
+      if(imported3$status() == "success"){
+        updateRadioButtons(session = session,
+                           inputId = "assignmentmode",
+                           
+                           choiceNames = c("From m/z values",
+                                           "From compositions"),
+                           choiceValues = c("frommz","fromcomp"),
+                           inline = T, 
+                           selected = "frommz"
+                           )
+      }
+    }
+    
+  })
   
   #analyze data for single ion mode
   analyzed_data <- renderUI({
     if(!is.na(suppressWarnings(as.numeric(input$comp)))){
       #input is numeric
-      
       #assign composition to m/z:
       comp.object <- assign_comp_from_mz(mz = input$comp,
                                          elements = this_table()$element,
@@ -1913,8 +1940,15 @@ server <- function(input, output, session){
                                        trigger_return = "change")
   
   output$status2 <- renderPrint({
-    if(!is.null(imported2$status())){
-      if(imported2$status() == "success"){
+    if(!is.null(imported2$status()) | !is.null(imported3$status())){
+      if(!is.null(imported2$status())){
+        import.successful <- (imported2$status() == "success")
+      }else{
+        if(!is.null(imported3$status())){
+          import.successful <- (imported3$status() == "success")
+        }
+      }
+      if(import.successful){
         if(!("mz" %in% colnames(data.full2()))){
           if(length(which(colnames(data.full2()) %in% relevant.col.names)) == 0 ){
             HTML(paste0("Import successful, but no column names detected. ", "Assuming that the leftmost non-empty column contains m/z values.",ifelse( any(data.full2()$structure %in% pls$gen.structure) ,""," Exact structure is unknown for all assigned structures, so exact structure columns are not being shown."),sep = '<br/>'))
@@ -1925,7 +1959,12 @@ server <- function(input, output, session){
           HTML(paste0("Import successful. Detected columns: ", paste( colnames(data.full2())[ !(colnames(data.full2()) %in% c("structure","composition","theo.mass","rdb","delta","strain.specific.assignment")) & !grepl("exact.structure",colnames(data.full2()))],collapse = ', '),ifelse( any(data.full2()$structure %in% pls$gen.structure) ,"",". Exact structure is unknown for all assigned structures, so exact structure columns are not being shown.")))
         }
       }else{
-        imported2$status()
+        if(!is.null(imported2$status())){
+          imported2$status()
+        }else{
+          imported3$status()
+        }
+        
       }
     }else{
       imported2$status()
@@ -1983,55 +2022,50 @@ server <- function(input, output, session){
     at[input$alignment_shiny_table_cell_edit$row,input$alignment_shiny_table_cell_edit$col] <- input$alignment_shiny_table_cell_edit$value
     alignment_table(at)
   })
-  observeEvent(input$plot_click, {
-    x_threshold = (range(data.full3()$mz)[2]-range(data.full3()$mz)[1])/100
-    y_threshold = max(data.full3()$intensity.plot.col)/75
-    a <- abs(data.full3()$mz - input$plot_click$x) < x_threshold
-    b <- abs(data.full3()$intensity.plot.col - input$plot_click$y) < y_threshold
-    if(length(which(a & b))==1){
-      add_row <- data.frame(mz = data.full3()$mz[a & b],
-                            theo.mass = NA)
-      if( !(add_row$mz %in% alignment_table()$mz) ){
-        alignment_table(rbind(add_row, alignment_table()))
-      }
-    }
-    
-  })
   
-  ranges <- reactiveValues(x=NULL,y=NULL)
-  
-  observe({
-    brush <- input$zoom_brush
-    if(!is.null(brush)){
-      ranges$x <- c(round(brush$xmin), round(brush$xmax))
-    }else{
-      if(!is.null(imported3$data())){
-        ranges$x <- c(round(min(data.full3()$mz)),
-                      round(max(data.full3()$mz)))
-      }
+
+  observeEvent(event_data("plotly_click", source = "plot1"), {
+    d <- event_data("plotly_click", source = "plot1")
+    add_row <- data.frame(mz = d$x,
+                          theo.mass = NA)
+    if( !(add_row$mz %in% alignment_table()$mz) ){
+      alignment_table(rbind(add_row, alignment_table()))
     }
   })
   
-  output$plot1 <- renderPlot({
-    if(!is.null(imported3$data())){
+  
+  output$plot1 <- renderPlotly({
+    if(!is.null(tab3data())){
       df <- data.full3()
-      if(!is.null(input$zoom_brush)){
-        df <- df[df$mz >= ranges$x[1] & df$mz <= ranges$x[2],]
-      }
-    ggplot(df, aes(x = mz, y = intensity.plot.col))+
-      geom_point()+
-      theme_bw()+
-      ylab("Intensity")+
-      xlab("m/z")+
-      ggrepel::geom_text_repel(data = dplyr::slice_head(dplyr::arrange(df,desc(intensity.plot.col)), n = max(10,floor(nrow(df)/100)) ),
-                      aes(label = mz))+
-      theme(text=element_text(size=15))
+      df$mz <- round(df$mz, digits = 8)
+      divider <- 100
+       p1 <- ggplot(df, aes(x = mz, y = intensity.plot.col))+
+          geom_point()+
+          theme_bw()+
+          ylab("Intensity")+
+          xlab("m/z")+
+          annotate("text",
+                   #data = dplyr::slice_head(dplyr::arrange(df,desc(intensity.plot.col)), n = max(10,floor(nrow(df)/100))),
+                   x = dplyr::slice_head(dplyr::arrange(df,desc(intensity.plot.col)), n = max(10,floor(nrow(df)/divider)))$mz,
+                   y = dplyr::slice_head(dplyr::arrange(df,desc(intensity.plot.col)), n = max(10,floor(nrow(df)/divider)))$intensity.plot.col + max(abs(df$intensity.plot.col))/30,
+                   label = dplyr::slice_head(dplyr::arrange(df,desc(intensity.plot.col)), n = max(10,floor(nrow(df)/divider)))$mz,
+                   # vjust = max(abs(df$intensity.plot.col))/10,
+                   size = 3
+                   )+
+          # geom_text(data = dplyr::slice_head(dplyr::arrange(df,desc(intensity.plot.col)), n = max(10,floor(nrow(df)/100)) ),
+          #                          aes(label = mz,x = mz, y = intensity.plot.col + max(abs(df$intensity.plot.col))/50))+
+          theme(text=element_text(size=15))
+       p1 %>% ggplotly(source = "plot1") %>% 
+         event_register('plotly_click') %>% 
+         config(displayModeBar = FALSE)
+
     }
   })
+  
   
   data.full3 <- reactive({
-    if(!is.null(imported3$data())){
-      df<-imported3$data()
+    if(!is.null(tab3data())){
+      df <- tab3data()
       while( most(is.na(df[,ncol(df)])) | most(df[,ncol(df)] == "") | most(is.null(df[,ncol(df)]))){
         df<-df[,1:(ncol(df)-1)]
       }
@@ -2048,9 +2082,9 @@ server <- function(input, output, session){
       colnames(df)[unlist(lapply(colnames(df),grepl,pattern = "comp",ignore.case = T,perl = T))]<-"composition"
 
       if("mz" %in% colnames(df)){
-        df <- df[df$mz != "" ,]
+        df <- df[df$mz != "" & !is.na(df$mz) & !is.null(df$mz),]
       }else{
-        df <- df[df[,1] != "" ,]
+        df <- df[df[,1] != "" & !is.na(df[,1]) & !is.null(df[,1]),]
         colnames(df)[1] <- "mz"
       }
       if( !("rel.intensity" %in% colnames(df)) && !("intensity" %in% colnames(df))){
@@ -2081,16 +2115,69 @@ server <- function(input, output, session){
       df
     }
     else{
-      imported3$data()
+      tab3data()
     }
     
   })
   
   
+  tab2data <- reactive({
+      return(imported2$data())
+  })
+  
+  tab3data <- reactive({
+      return(imported3$data())
+  })
   
   data.full2 <- reactive({
-    if( !is.null( imported2$data() ) ){
-      df <- imported2$data()
+    transferdata_value <- ifelse(is.null(input$transferdata),
+                                 F,
+                                 input$transferdata == "y")
+    if( !is.null( tab2data() ) | !is.null(tab3data()) ){
+      if(transferdata_value | is.null(tab2data() )){
+        df <- tab3data()
+        if(!is.null(df)){
+          while( most(is.na(df[,ncol(df)])) | most(df[,ncol(df)] == "") | most(is.null(df[,ncol(df)]))){
+            df<-df[,1:(ncol(df)-1)]
+          }
+          while( most(is.na(df[,1])) | most(df[,1] == "") | most(is.null(df[,1]))){
+            df<-df[,2:ncol(df)]
+          }
+          
+          colnames(df)[(unlist(lapply(colnames(df),grepl,pattern = "m",ignore.case = T,perl = T)) & unlist(lapply(colnames(df),grepl,pattern = "z",ignore.case = T,perl = T)))]<-"mz"
+          colnames(df)[(unlist(lapply(colnames(df),grepl,pattern = "int",ignore.case = T,perl = T)) & !unlist(lapply(colnames(df),grepl,pattern = "rel",ignore.case = T,perl = T)))]<-"intensity"
+          colnames(df)[unlist(lapply(colnames(df),grepl,pattern = "rel",ignore.case = T,perl = T))]<-"rel.intensity"
+          colnames(df)[unlist(lapply(colnames(df),grepl,pattern = "theo",ignore.case = T,perl = T))]<-"theo.mass"
+          colnames(df)[( unlist(lapply(colnames(df),grepl,pattern = "delta",ignore.case = T,perl = T)) | unlist(lapply(colnames(df),grepl,pattern = "mmu",ignore.case = T,perl = T)) | unlist(lapply(colnames(df),grepl,pattern = "amu",ignore.case = T,perl = T)) | unlist(lapply(colnames(df),grepl,pattern = "ppm",ignore.case = T,perl = T)) )]<-"delta"
+          colnames(df)[unlist(lapply(colnames(df),grepl,pattern = "rdb",ignore.case = T,perl = T))]<-"rdb.equiv"
+          colnames(df)[unlist(lapply(colnames(df),grepl,pattern = "comp",ignore.case = T,perl = T))]<-"composition"
+          
+          if("mz" %in% colnames(df)){
+            df <- df[df$mz != "" & !is.na(df$mz) & !is.null(df$mz),]
+          }else{
+            df <- df[df[,1] != "" & !is.na(df[,1]) & !is.null(df[,1]),]
+            colnames(df)[1] <- "mz"
+          }
+          
+          if(nrow(alignment_table()) > 0 && all(!is.na(alignment_table()$theo.mass)) ){
+            if(nrow(alignment_table()) == 1){
+              df$mz <- as.numeric(df$mz) + (as.numeric(alignment_table()$theo.mass[1]) - as.numeric(alignment_table()$mz[1]))
+            }else{
+              yvals <- (as.numeric(alignment_table()$theo.mass) - as.numeric(alignment_table()$mz))
+              xvals <- as.numeric(alignment_table()$mz)
+              s <- summary(lm(yvals ~ xvals))$coefficients
+              yint <- as.numeric(s[rownames(s) == "(Intercept)",colnames(s) == "Estimate"])
+              slope <- as.numeric(s[rownames(s) == "xvals",colnames(s) == "Estimate"])
+              df$mz <- as.numeric(df$mz) + ((slope*as.numeric(df$mz))+yint)
+            }
+          }
+        }
+        
+      }else{
+        df <- tab2data()
+      }
+
+      
       withProgress(message = "Assigning composition to m/z values",value = 0, {
       while( most(is.na(df[,ncol(df)])) | most(df[,ncol(df)] == "") | most(is.null(df[,ncol(df)]))){
         df<-df[,1:(ncol(df)-1)]
@@ -2108,7 +2195,7 @@ server <- function(input, output, session){
       colnames(df)[unlist(lapply(colnames(df),grepl,pattern = "comp",ignore.case = T,perl = T))]<-"composition"
       
       if("mz" %in% colnames(df)){
-        df <- df[df$mz != "" ,]
+        df <- df[df$mz != "" & !is.na(df$mz) & !is.null(df$mz),]
         comp.object <- assign_comp_from_mz(mz = df$mz,
                                            elements = this_table2()$element,
                                            isotope = this_table2()$isotope,
@@ -2121,7 +2208,7 @@ server <- function(input, output, session){
                                            all.elements = all.elements,
                                            error.ppm = input$bulk.delta.error)
       }else{
-        df <- df[df[,1] != "" ,]
+        df <- df[df[,1] != "" & !is.na(df[,1]) & !is.null(df[,1]),]
         comp.object <- assign_comp_from_mz(mz = df[,1],
                                            elements = this_table2()$element,
                                            isotope = this_table2()$isotope,
@@ -2263,13 +2350,14 @@ server <- function(input, output, session){
       
     }
     else{
-      imported2$data()
+      tab2data()
     }
   }) %>% bindEvent(input$bulk.analyze.button)
   
+  
   output$data2 <- renderPrint({
-    if(is.null(imported2$data())){
-      imported2$data()
+    if(is.null(tab2data()) & is.null(tab3data())){
+      tab2data()
     }else{
       if(input$returnAll == "returnassignedpeaks"){
         data.full2()[data.full2()$structure != "",] |> head(n = 10)
@@ -2302,7 +2390,7 @@ server <- function(input, output, session){
       paste0(imported2$name(),".csv")
     },
     content = function(file){
-      if(!is.null(imported2$data()) && input$returnAll == "returnassignedpeaks"){
+      if(( !is.null(tab2data()) | !is.null(tab3data()) ) && input$returnAll == "returnassignedpeaks"){
         write.csv(data.full2()[data.full2()$structure != "",],file,row.names = F)
       }else{
         write.csv(data.full2(),file,row.names = F)
