@@ -1,0 +1,590 @@
+﻿gen.structure,es.1,es.2,es.3,es.4,es.5,es.6,es.7,strain
+PC(28:0),14:0/14:0-PC,,,,,,,
+PC(30:1),14:0/16:1-PC,,,,,,,
+PC(30:0),14:0/16:0-PC,,,,,,,
+PC(O-32:0),a16:0/16:0-PC,,,,,,,
+PC(32:2),16:1/16:1-PC,,,,,,,
+PC(32:1),16:0/16:1-PC,,,,,,,
+PC(32:0),16:0/16:0-PC,,,,,,,
+PC(O-34:1),a16:0/18:1-PC,,,,,,,
+PC(34:3),16:1/18:2-PC,,,,,,,
+PC(34:2),16:0/18:2-PC,,,,,,,
+PC(34:1),16:0/18:1-PC,,,,,,,
+PC(O-36:4),a16:0/20:4-PC,,,,,,,
+PC(36:5),16:1/20:4-PC,,,,,,,
+PC(36:4),16:0/20:4-PC,18:2/18:2-PC,18:1/18:3-PC,,,,,
+PC(36:3),18:1/18:2-PC,16:0/20:3-PC,,,,,,
+PC(36:2),18:0/18:2-PC,18:1/18:1-PC,,,,,,
+PC(36:1),18:0/18:1-PC,,,,,,,
+PC(36:0),18:0/18:0-PC,,,,,,,
+PC(O-38:4),a18:0/20:4-PC,,,,,,,
+PC(38:6),16:0/22:6-PC,,,,,,,
+PC(38:5),18:1/20:4-PC,16:0/22:5-PC,,,,,,
+PC(38:4),18:0/20:4-PC,,,,,,,
+PC(38:3),18:0/20:3-PC,18:1/20:2-PC,,,,,,
+PC(38:2),18:0/20:2-PC,18:1/20:1-PC,,,,,,
+PC(38:1),18:0/20:1-PC,,,,,,,
+PC(40:7),18:1/22:6-PC,,,,,,,
+PC(40:6),18:0/22:6-PC,18:2/22:4-PC,,,,,,
+PC(42:10),20:4/22:6-PC,,,,,,,
+SM(34:1),d18:1/16:0-SM,,,,,,,
+SM(36:1),d18:1/18:0-SM,,,,,,,
+SM(38:1),d18:1/20:0-SM,,,,,,,
+SM(40:1),d18:1/22:0-SM,,,,,,,
+SM(41:1),d18:1/23:0-SM,,,,,,,
+SM(42:3),d18:1/24:2-SM,d18:2/24:1-SM,,,,,,
+SM(42:2),d18:1/24:1-SM,,,,,,,
+SM(42:1),d18:1/24:0-SM,,,,,,,
+SM(43:1),d18:1/25:0-SM,,,,,,,
+SM(44:2),d18:1/26:1-SM,,,,,,,
+SM(44:1),d18:1/26:0-SM,,,,,,,
+PE(28:0),14:0/14:0-PE ,,,,,,,
+PE(30:0),14:0/16:0-PE ,,,,,,,
+PE(O-32:0),a16:0/16:0-PE ,,,,,,,
+PE(P-32:0),p16:0/16:0-PE ,,,,,,,
+PE(P-32:1),p16:0/16:1-PE ,,,,,,,
+PE(32:2),16:0/16:2-PE ,,,,,,,
+PE(32:1),16:0/16:1-PE ,,,,,,,
+PE(32:0),16:0/16:0-PE ,,,,,,,
+PE(P-34:2),p16:0/18:2-PE,,,,,,,
+PE(P-34:1),p16:0/18:1-PE,,,,,,,
+PE(P-34:0),p16:0/18:0-PE,,,,,,,
+PE(34:2),16:0/18:2-PE,16:1/18:1-PE,,,,,,
+PE(34:1),16:0/18:1-PE,,,,,,,
+PE(34:0),16:0/18:0-PE,,,,,,,
+PE(P-36:4),p16:0/20:4-PE,,,,,,,
+PE(P-36:3),p16:0/20:3-PE,,,,,,,
+PE(P-36:2),p18:0/18:2-PE,p18:1/18:1-PE,,,,,,
+PE(P-36:1),p18:0/18:1-PE,,,,,,,
+PE(36:5),16:1/20:4-PE,,,,,,,
+PE(36:4),16:0/20:4-PE,18:1/18:3-PE,,,,,,
+PE(36:3),18:1/18:2-PE,16:0/20:3-PE,,,,,,
+PE(36:2),18:0/18:2-PE,,,,,,,
+PE(36:1),18:0/18:1-PE,,,,,,,
+PE(P-38:6),p16:0/22:6-PE,,,,,,,
+PE(P-38:5),p16:0/22:5-PE,,,,,,,
+PE(P-38:4),p18:0/20:4-PE,,,,,,,
+PE(P-38:3),p18:0/20:3-PE,,,,,,,
+PE(38:6),16:0/22:6-PE,,,,,,,
+PE(38:5),18:1/20:4-PE,16:0/22:5-PE,,,,,,
+PE(38:4),18:0/20:4-PE,16:0/22:4-PE,,,,,,
+PE(38:3),18:0/20:3-PE,,,,,,,
+PE(38:2),18:0/20:2-PE,,,,,,,
+PE(P-40:6),p18:0/22:6-PE,,,,,,,
+PE(P-40:5),p18:0/22:5-PE,,,,,,,
+PE(P-40:4),p18:0/22:4-PE,,,,,,,
+PE(40:8),20:4/20:4-PE,18:2/22:6-PE,,,,,,
+PE(40:7),18:1/22:6-PE,,,,,,,
+PE(40:6),18:0/22:6-PE,,,,,,,
+PE(40:5),18:0/22:5-PE,18:1/22:4-PE,,,,,,
+PE(40:4),18:0/22:4-PE,,,,,,,
+PS(32:1),16:0/16:1-PS,,,,,,,
+PS(P-34:1),p16:0/18:1-PS,,,,,,,
+PS(34:2),16:0/18:2-PS,16:1/18:1-PS,,,,,,
+PS(34:1),16:0/18:1-PS,,,,,,,
+PS(P-36:1),p18:0/18:1-PS,,,,,,,
+PS(36:4),16:0/20:4-PS,,,,,,,
+PS(36:3),18:1/18:2-PS,,,,,,,
+PS(36:2),18:0/18:2-PS,18:1/18:1-PS,,,,,,
+PS(36:1),18:0/18:1-PS,,,,,,,
+PS(38:4),18:0/20:4-PS,,,,,,,
+PS(38:3),18:0/20:3-PS,,,,,,,
+PS(38:2),18:1/20:1-PS,18:0/20:2-PS,,,,,,
+PS(38:1),18:0/20:1-PS,20:0/18:1-PS,,,,,,
+PS(40:6),18:0/22:6-PS,,,,,,,
+PS(40:4),20:0/20:4-PS,18:0/22:4-PS,,,,,,
+PS(40:2),20:0/20:2-PS,,,,,,,
+PS(40:1),20:0/20:1-PS,,,,,,,
+PS(42:1),20:0/22:1-PS,,,,,,,
+PG(30:1),14:0/16:1-PG,,,,,,,
+PG(30:0),14:0/16:0-PG,,,,,,,
+PG(32:2),16:1/16:1-PG,16:0/16:2-PG,,,,,,
+PG(32:1),16:0/16:1-PG,,,,,,,
+PG(32:0),16:0/16:0-PG,,,,,,,
+PG(34:3),16:1/18:2-PG,,,,,,,
+PG(34:2),16:0/18:2-PG,16:1/18:1-PG,,,,,,
+PG(34:1),16:0/18:1-PG,,,,,,,
+PG(36:4),16:0/20:4-PG,,,,,,,
+PG(36:3),18:1/18:2-PG,16:0/20:3-PG,,,,,,
+PG(36:2),18:1/18:1-PG,18:0/18:2-PG,,,,,,
+PG(36:1),18:0/18:1-PG,,,,,,,
+PG(38:2),18:1/20:1-PG,18:0/20:2-PG,,,,,,
+PG(38:7),16:1/22:6-PG,,,,,,,
+PG(38:6),16:0/22:6-PG,18:2/20:4-PG,,,,,,
+PG(38:5),18:1/20:4-PG,,,,,,,
+PG(38:4),18:0/20:4-PG,,,,,,,
+PG(38:3),18:0/20:3-PG,,,,,,,
+PG(40:7),18:1/22:6-PG,20:3/20:4-PG,,,,,,
+PG(40:6),18:0/22:6-PG,,,,,,,
+PA(28:0),14:0/14:0-PA,,,,,,,
+PA(30:0),14:0/16:0-PA,,,,,,,
+PA(32:1),16:0/16:1-PA,,,,,,,
+PA(32:0),16:0/16:0-PA,,,,,,,
+PA(P-34:0),p16:0/18:0-PA,,,,,,,
+PA(34:2),16:1/18:1-PA,16:0/18:2-PA,,,,,,
+PA(34:1),16:0/18:1-PA,,,,,,,
+PA(34:0),16:0/18:0-PA,,,,,,,
+PA(36:2),18:0/18:2-PA,18:1/18:1-PA,,,,,,
+PA(36:1),18:0/18:1-PA,,,,,,,
+PA(38:4),18:0/20:4-PA,,,,,,,
+PA(40:6),18:0/22:6-PA,,,,,,,
+PI(P-32:0),p16:0/16:0-PI,,,,,,,
+PI(O-32:0),a16:0/16:0-PI,,,,,,,
+PI(32:2),16:1/16:1-PI,,,,,,,
+PI(32:1),16:0/16:1-PI,,,,,,,
+PI(32:0),16:0/16:0-PI,,,,,,,
+PI(O-34:0),a16:0/18:0-PI,,,,,,,
+PI(O-34:1),a16:0/18:1-PI,,,,,,,
+PI(34:2),16:0/18:2-PI,,,,,,,
+PI(34:1),16:0/18:1-PI,,,,,,,
+PI(O-36:0),a18:0/18:0-PI,,,,,,,
+PI(O-36:1),a18:0/18:1-PI,,,,,,,
+PI(O-36:2),a18:0/18:2-PI,,,,,,,
+PI(36:4),16:0/20:4-PI,,,,,,,
+PI(36:3),18:1/18:2-PI,,,,,,,
+PI(36:2),18:0/18:2-PI,18:1/18:1-PI,,,,,,
+PI(36:1),18:0/18:1-PI,,,,,,,
+PI(O-38:6),a16:0/22:6-PI,,,,,,,
+PI(O-38:5),a16:0/22:5-PI,,,,,,,
+PI(O-38:4),a18:0/20:4-PI,,,,,,,
+PI(38:6),16:0/22:6-PI,,,,,,,
+PI(38:5),18:1/20:4-PI,,,,,,,
+PI(38:4),18:0/20:4-PI,,,,,,,
+PI(40:6),18:0/22:6-PI,,,,,,,
+PI(40:5),18:0/22:5-PI,,,,,,,
+PI(40:4),18:0/22:4-PI,,,,,,,
+PI(40:2),20:0/20:2-PI,,,,,,,
+CL(56:0),CL: A-14:0/14:0; B-14:0/14:0,,,,,,,
+CL(64:2),CL: A-16:0/16:1; B-16:0/16:1,CL: A-14:0/16:1; B-16:0/18:1,CL: A-18:1/16:1; B-16:0/14:0,,,,,
+CL(64:1),CL: A-16:0/16:0; B-16:0/16:1,CL: A-16:0/14:0; B-16:0/18:1,,,,,,
+CL(65:2),CL: A-16:0/17:1; B-16:0/16:1,CL: A-16:0/16:1; B-16:0/17:1,CL: A-14:0/17:1; B-16:0/18:1,,,,,
+CL(66:3),CL: A-16:0/16:1; B-18:1/16:1,CL: A-16:1/16:1; B-16:0/18:1,CL: A-18:1/18:1; B-14:0/16:1,CL: A-17:1/16:1; B-16:0/17:1,,,,
+CL(66:2),CL: A-16:0/16:1; B-16:0/18:1,CL: A-16:0/17:1; B-16:0/17:1,CL: A-18:1/18:1; B-16:0/14:0,,,,,
+CL(67:3),CL: A-16:0/17:1; B-18:1/16:1,CL: A-18:1/16:1; B-16:0/17:1,CL: A-18:1/17:1; B-16:0/16:1,CL: A-16:1/17:1; B-16:0/18:1,CL: A-14:0/17:1; B-18:1/18:1,CL: A-16:1/16:1; B-16:0/19:1,CL: A-14:0/16:1; B-18:1/19:1,
+CL(67:2),CL: A-16:0/17:1; B-16:0/18:1,CL: A-16:0/16:1; B-16:0/19:1,,,,,,
+CL(68:4),CL: A-18:1/16:1; B-18:1/16:1,CL: A-18:1/18:1; B-16:1/16:1,CL: A-17:1/16:1; B-18:1/17:1,,,,,
+CL(68:3),CL: A-18:1/16:1; B-16:0/18:1,CL: A-18:1/18:1; B-16:0/16:1,CL: A-18:1/17:1; B-16:0/17:1,,,,,
+CL(68:2),CL: A-16:0/18:1; B-16:0/18:1,,,,,,,
+CL(69:4),CL: A-18:1/17:1; B-18:1/16:1,CL: A-17:1/16:1; B-18:1/18:1,CL: A-18:1/19:1; B-16:1/16:1,,,,,
+CL(69:3),CL: A-18:1/18:1; B-16:0/17:1,CL: A-18:1/17:1; B-16:0/18:1,CL: A-18:1/16:1; B-16:0/19:1,CL: A-18:1/19:1; B-16:0/16:1,,,,
+CL(70:7),CL: A-18:2/18:2; B-18:2/16:1,,,,,,,
+CL(70:6),CL: A-18:2/18:2; B-18:2/16:0,,,,,,,
+CL(70:4),CL: A-18:1/18:1; B-18:1/16:1,CL: A-18:1/17:1; B-18:1/17:1,,,,,,
+CL(70:3),CL: A-18:1/18:1; B-16:0/18:1,CL: A-18:1/19:1; B-16:0/17:1,CL: A-18:1/17:1; B-16:0/19:1,,,,,
+CL(71:4),CL: A-18:1/18:1; B-18:1/17:1,CL: A-18:1/18:1; B-19:1/16:1,CL: A-18:1/19:1; B-18:1/16:1,,,,,
+CL(71:3),CL: A-18:1/18:1; B-16:0/19:1,CL: A-18:1/19:1; B-16:0/18:1,,,,,,
+CL(72:10),CL: A-18:2/18:3; B-18:2/18:3,,,,,,,
+CL(72:9),CL: A-18:2/18:3; B-18:2/18:2,,,,,,,
+CL(72:8),CL: A-18:2/18:2; B-18:2/18:2,,,,,,,
+CL(72:7),CL: A-18:2/18:2; B-18:1/18:2,,,,,,,
+CL(72:6),CL: A-18:1/18:2; B-18:1/18:2,,,,,,,
+CL(72:4),CL: A-18:1/18:1; B-18:1/18:1,CL: A-18:1/17:1; B-18:1/19:1,,,,,,
+CL(73:4),CL: A-18:1/19:1; B-18:1/18:1,CL: A-18:1/18:1; B-18:1/19:1,CL: A-20:1/18:1; B-18:1/17:1,,,,,
+CL(74:10),CL: A-18:2/20:4; B-18:2/18:2,,,,,,,
+CL(74:9),CL: A-18:2/18:2; B-18:2/20:3,,,,,,,
+CL(74:8),CL: A-18:2/20:2; B-18:2/18:2,CL: A-18:2/20:3; B-18:2/18:1,,,,,,
+CL(76:13),CL: A-18:2/22:7; B-18:2/18:2,,,,,,,
+CL(76:12),CL: A-18:2/22:6; B-18:2/18:2,CL: A-18:2/20:4; B-18:2/20:4,,,,,,
+CL(76:11),CL: A-18:2/22:5; B-18:2/18:2,,,,,,,
+Ceramide(32:1),Cer-d18:1/14:0,,,,,,,
+Ceramide(30:1),Cer-d18:1/12:0,,,,,,,
+Ceramide(34:2),Cer-d18:1/16:1,,,,,,,
+Ceramide(34:1),Cer-d18:1/16:0,,,,,,,
+dihydroCer(34:0),Cer-d18:0/16:0,,,,,,,
+Ceramide(35:1),Cer-d18:1/17:0,,,,,,,
+phytoCer(34:1),Cer-d18:1/h16:0,,,,,,,
+Ceramide(38:1),Cer-d18:1/20:0,,,,,,,
+Ceramide(36:2),Cer-d18:1/18:1,,,,,,,
+Ceramide(36:1),Cer-d18:1/18:0,,,,,,,
+Ceramide(40:2),Cer-d18:1/22:1,Cer-d18:0/22:2,,,,,,
+Ceramide(40:1),Cer-d18:1/22:0,,,,,,,
+Ceramide(41:1),Cer-d18:1/23:0,,,,,,,
+Ceramide(42:1),Cer-d18:1/24:0,,,,,,,
+Ceramide(41:2),Cer-d18:1/23:1,,,,,,,
+phytoCer(40:1),Cer-d18:1/h22:0,,,,,,,
+Ceramide(44:1),Cer-d18:1/26:0,,,,,,,
+Ceramide(42:3),Cer-d18:1/24:2,,,,,,,
+Ceramide(42:2),Cer-d18:1/24:1,Cer-d18:0/24:2,,,,,,
+PE(34:3),16:1/18:2-PE,,,,,,,
+PC(44:12),22:6/22:6-PC,,,,,,,
+PC(54:12),32:6/22:6-PC,,,,,,,
+PC(56:12),34:6/22:6-PC,,,,,,,
+PE(P-36:5),p16:1/20:4-PE,,,,,,,
+PE(P-38:7),p18:1/20:6-PE,,,,,,,
+PE(P-40:7),p18:1/22:6-PE,,,,,,,
+PE(38:1),18:0/20:1-PE,,,,,,,
+PE(40:3),20:0/20:3-PE,20:1/20:2-PE,,,,,,
+PE(P-42:6),p20:0/22:6-PE,,,,,,,
+PE(42:7),20:3/22:4-PE,,,,,,,
+PE(42:6),20:0/22:6-PE,,,,,,,
+PS(36:5),16:1/20:4-PS,,,,,,,
+PS(38:6),16:0/22:6-PS,16:1/22:5-PS,,,,,,
+PS(38:5),18:1/20:4-PS,,,,,,,
+PS(38:0),18:0/20:0-PS,,,,,,,
+PS(40:7),18:1/22:6-PS,20:3/20:4-PS,,,,,,
+PS(40:3),20:0/20:3-PS,20:1/20:2-PS,,,,,,
+PS(42:11),20:5/22:6-PS,,,,,,,
+PS(42:6),20:0/22:6-PS,,,,,,,
+PS(42:5),20:0/22:5-PS,,,,,,,
+PS(42:4),20:0/22:4-PS,,,,,,,
+PS(44:12),22:6/22:6-PS,,,,,,,
+PS(44:11),22:5/22:6-PS,,,,,,,
+PS(46:12),22:6/24:6-PS,,,,,,,
+PS(54:5),22:0/32:5,,,,,,,
+PS(54:1),22:0/32:1,,,,,,,
+PS(56:6),24:0/32:6,,,,,,,
+PS(56:5),24:0/32:5,,,,,,,
+PG(30:1),14:0/16:1-PG,14:1/16:0-PG,,,,,,e.coli
+PG(30:0),16:0/14:0-PG,,,,,,,e.coli
+PG(32:2),16:1/16:1-PG,,,,,,,e.coli
+PG(32:1),16:0/16:1-PG,14:0/18:1-PG,,,,,,e.coli
+PG(32:0),16:0/16:0-PG,,,,,,,e.coli
+PG(33:1),16:0/17:1-PG,,,,,,,e.coli
+PG(34:2),18:1/16:1-PG,,,,,,,e.coli
+PG(34:1),16:0/18:1-PG,,,,,,,e.coli
+PG(35:2),18:1/17:1-PG,16:1/19:1-PG,,,,,,e.coli
+PG(35:1),16:0/19:1-PG,,,,,,,e.coli
+PG(35:0),16:0/19:0-PG,,,,,,,e.coli
+PG(36:2),18:1/18:1-PG,,,,,,,e.coli
+PG(37:2),18:1/19:1-PG,,,,,,,e.coli
+PA(36:3),18:1/18:2-PA,,,,,,,
+PA(38:6),16:0/22:6-PA,,,,,,,
+PA(38:5),18:1/20:4-PA,,,,,,,
+PA(40:7),18:1/22:6-PA,20:3/20:4-PA,,,,,,
+Ceramide(26:1), Cer-d18:1/8:0,,,,,,,
+Ceramide(44:2),Cer-d18:1/26:1,,,,,,,
+Ceramide(43:1),Cer-d17:1/26:0,,,,,,,
+dihydroCer(36:0),Cer-d18:0/18:0,,,,,,,
+dihydroCer(42:0),Cer-d18:0/24:0,,,,,,,
+dihydroCer(44:0),Cer-d18:0/26:0,,,,,,,
+dihydroCer(46:0),Cer-d18:0/28:0,,,,,,,
+phytoCer(32:1),Cer-d16:1/ah16:0,,,,,,,
+phytoCer(33:0),Cer-d17:0/ah16:0,,,,,,,
+phytoCer(33:1),Cer-d17:1/ah16:0,,,,,,,
+phytoCer(36:1),Cer-d18:1/ah18:0,,,,,,,
+phytoCer(38:0),Cer-t18:0/20:0,,,,,,,
+phytoCer(40:0),Cer-t18:0/22:0,,,,,,,
+phytoCer(42:0),Cer-t18:0/24:0,,,,,,,
+phytoCer(43:1),Cer-d17:1/Bh26:0,,,,,,,
+phytoCer(50:1),Cer-d18:1/wh32:0,,,,,,,
+phytoCer(50:2),Cer-d18:1/wh32:1,,,,,,,
+phytoCer(52:2),Cer-d18:1/wh34:1,,,,,,,
+"phytoCer(h2,33:0)",Cer-t17:0/ah16:0,,,,,,,
+"phytoCer(h2,34:0)",Cer-t18:0/ah16:0,,,,,,,
+"phytoCer(h2,36:0)",Cer-t16:0/ah20:0,Cer-t18:0/ah18:0,,,,,,
+"phytoCer(h2,37:0)",Cer-t17:0/ah20:0,,,,,,,
+"phytoCer(h2,38:0)",Cer-t18:0/ah20:0,,,,,,,
+"phytoCer(h2,40:0)",Cer-t18:0/ah22:0,,,,,,,
+"phytoCer(h2,42:0)",Cer-t18:0/ah24:0,,,,,,,
+"phytoCer(h2,42:1)",Cer-t18:1/ah24:0,,,,,,,
+"phytoCer(h2,44:1)",Cer-t18:1/ah26:0,,,,,,,
+"phytoCer(h2,48:1)",Cer-t18:1/wh30:0,,,,,,,
+"phytoCer(h2,50:1)",Cer-t20:1/wh30:0,,,,,,,
+phytoCer(32:0),Cer-d18:0/ah14:0,Cer-d16:0/ah16:0,,,,,,
+phytoCer(34:0),Cer-t16:0/18:0,Cer-t18:0/16:0,Cer-d18:0/ah16:0,,,,,
+phytoCer(44:1),Cer-d18:1/wh26:0,Cer-d18:1/Bh26:0,,,,,,
+phytoCer(42:1),Cer-d18:1/h24:0,Cer-d18:1/ah24:0,,,,,,
+monolysoCL(54:6),CL: A-18:2/18:2; B-18:2/0,,,,,,,
+monolysoCL(54:5),CL: A-18:2/18:2; B-18:1/0,CL: A-18:1/18:2; B-18:2/0,,,,,,
+CL(56:0),CL: A-14:0/14:0; B-14:0/14:0,,,,,,,e.coli
+CL(64:2),CL: A-16:0/16:1; B-16:0/16:1,CL: A-14:0/16:1; B-16:0/18:1,CL: A-18:1/16:1; B-16:0/14:0,,,,,e.coli
+CL(64:1),CL: A-16:0/16:0; B-16:0/16:1,CL: A-16:0/14:0; B-16:0/18:1,,,,,,e.coli
+CL(65:2),CL: A-16:0/17:1; B-16:0/16:1,CL: A-16:0/16:1; B-16:0/17:1,CL: A-14:0/17:1; B-16:0/18:1,,,,,e.coli
+CL(66:3),CL: A-16:0/16:1; B-18:1/16:1,CL: A-16:1/16:1; B-16:0/18:1,CL: A-18:1/18:1; B-14:0/16:1,CL: A-17:1/16:1; B-16:0/17:1,,,,e.coli
+CL(66:2),CL: A-16:0/16:1; B-16:0/18:1,CL: A-16:0/17:1; B-16:0/17:1,CL: A-18:1/18:1; B-16:0/14:0,,,,,e.coli
+CL(67:3),CL: A-16:0/17:1; B-18:1/16:1,CL: A-18:1/16:1; B-16:0/17:1,CL: A-18:1/17:1; B-16:0/16:1,CL: A-16:1/17:1; B-16:0/18:1,CL: A-14:0/17:1; B-18:1/18:1,CL: A-16:1/16:1; B-16:0/19:1,CL: A-14:0/16:1; B-18:1/19:1,e.coli
+CL(67:2),CL: A-16:0/17:1; B-16:0/18:1,CL: A-16:0/16:1; B-16:0/19:1,,,,,,e.coli
+CL(68:4),CL: A-18:1/16:1; B-18:1/16:1,CL: A-18:1/18:1; B-16:1/16:1,CL: A-17:1/16:1; B-18:1/17:1,,,,,e.coli
+CL(68:3),CL: A-18:1/16:1; B-16:0/18:1,CL: A-18:1/18:1; B-16:0/16:1,CL: A-18:1/17:1; B-16:0/17:1,,,,,e.coli
+CL(68:2),CL: A-16:0/18:1; B-16:0/18:1,,,,,,,e.coli
+CL(69:4),CL: A-18:1/17:1; B-18:1/16:1,CL: A-17:1/16:1; B-18:1/18:1,CL: A-18:1/19:1; B-16:1/16:1,,,,,e.coli
+CL(69:3),CL: A-18:1/18:1; B-16:0/17:1,CL: A-18:1/17:1; B-16:0/18:1,CL: A-18:1/16:1; B-16:0/19:1,CL: A-18:1/19:1; B-16:0/16:1,,,,e.coli
+CL(70:4),CL: A-18:1/18:1; B-18:1/16:1,CL: A-18:1/17:1; B-18:1/17:1,,,,,,e.coli
+CL(70:3),CL: A-18:1/18:1; B-16:0/18:1,CL: A-18:1/19:1; B-16:0/17:1,CL: A-18:1/17:1; B-16:0/19:1,,,,,e.coli
+CL(71:4),CL: A-18:1/18:1; B-18:1/17:1,CL: A-18:1/18:1; B-19:1/16:1,CL: A-18:1/19:1; B-18:1/16:1,,,,,e.coli
+CL(71:3),CL: A-18:1/18:1; B-16:0/19:1,CL: A-18:1/19:1; B-16:0/18:1,,,,,,e.coli
+CL(72:4),CL: A-18:1/18:1; B-18:1/18:1,CL: A-18:1/17:1; B-18:1/19:1,,,,,,e.coli
+CL(73:4),CL: A-18:1/19:1; B-18:1/18:1,CL: A-18:1/18:1; B-18:1/19:1,CL: A-20:1/18:1; B-18:1/17:1,,,,,e.coli
+PA(30:0),15:0/15:0-PA,,,,,,,listeria
+PA(31:0),16:0/15:0-PA,,,,,,,listeria
+PA(32:0),17:0/15:0-PA,,,,,,,listeria
+PA(33:0),17:0/16:0-PA,,,,,,,listeria
+PA(34:0),17:0/17:0-PA,,,,,,,listeria
+LPG(12:0),12:0/0-PG (lyso-12:0-PG),,,,,,,listeria
+LPG(13:0),13:0/0-PG (lyso-13:0-PG),,,,,,,listeria
+LPG(14:0),14:0/0-PG (lyso-13:0-PG),,,,,,,listeria
+LPG(15:0),15:0/0-PG (lyso-15:0-PG),,,,,,,listeria
+LPG(16:0),16:0/0-PG (lyso-16:0-PG),,,,,,,listeria
+LPG(17:0),17:0/0-PG (lyso-17:0-PG),,,,,,,listeria
+PG(P-30:0),p15:0/15:0-PG,,,,,,,listeria
+PG(29:0),15:0/14:0-PG,,,,,,,listeria
+PG(P-31:0),p16:0/15:0-PG,,,,,,,listeria
+PG(30:0),15:0/15:0-PG,,,,,,,listeria
+PG(P-32:0),p17:0/15:0-PG,,,,,,,listeria
+PG(31:0),16:0/15:0-PG,,,,,,,listeria
+PG(32:1),17:1/15:0-PG,,,,,,,listeria
+PG(32:0),17:0/15:0-PG,,,,,,,listeria
+PG(P-34:0),p17:0/17:0-PG,,,,,,,listeria
+PG(33:0),17:0/16:0-PG,,,,,,,listeria
+PG(34:0),17:0/17:0-PG,,,,,,,listeria
+dilysoCL(30:0),CL: A-15:0/0; B-15:0/0,,,,,,,listeria
+dilysoCL(31:0),CL: A-16:0/0; B-15:0/0,,,,,,,listeria
+dilysoCL(32:0),CL: A-17:0/0; B-15:0/0,,,,,,,listeria
+monolysoCL(42:0),CL: A-14:0/0; B-15:0/13:0,,,,,,,listeria
+monolysoCL(44:0),CL: A-14:0/0; B-15:0/15:0,,,,,,,listeria
+monolysoCL(45:0),CL: A-15:0/0; B-15:0/15:0,,,,,,,listeria
+monolysoCL(46:0),CL: A-16:0/0; B-15:0/15:0,,,,,,,listeria
+monolysoCL(47:0),CL: A-15:0/0; B-17:0/15:0,,,,,,,listeria
+monolysoCL(48:0),CL: A-16:0/0; B-17:0/15:0,,,,,,,listeria
+monolysoCL(49:0),CL: A-17:0/0; B-17:0/15:0,,,,,,,listeria
+CL(56:0),CL: A-15:0/13:0; B-15:0/13:0,,,,,,,listeria
+CL(58:0),CL: A-15:0/13:0; B-15:0/15:0,,,,,,,listeria
+CL(59:0),CL: A-15:0/14:0; B-15:0/15:0,,,,,,,listeria
+CL(60:0),CL: A-15:0/15:0; B-15:0/15:0,,,,,,,listeria
+CL(61:0),CL: A-15:0/15:0; B-16:0/15:0,,,,,,,listeria
+CL(62:0),CL: A-15:0/15:0; B-17:0/15:0,,,,,,,listeria
+CL(64:0),CL: A-17:0/15:0; B-17:0/15:0,,,,,,,listeria
+CL(65:0),CL: A-17:0/15:0; B-17:0/16:0,,,,,,,listeria
+CL(66:0),CL: A-17:0/15:0; B-17:0/17:0,,,,,,,listeria
+CL(57:0),CL: A-15:0/13:0; B-15:0/14:0,,,,,,,listeria
+CL(63:0),CL: A-16:0/15:0; B-17:0/15:0,,,,,,,listeria
+PI(O-34:2),a16:0/18:2-PI,,,,,,,
+PI(34:3),16:1/18:2-PI,16:0/18:3-PI,,,,,,
+PI(36:5),16:1/20:4-PI,,,,,,,
+PI(38:2),18:0/20:2-PI,,,,,,,
+PI(40:7),18:1/22:6-PI,20:3/20:4-PI,,,,,,
+DGDG(29:0),14:0/15:0-DGDG,,,,,,,listeria
+DGDG(30:0),15:0/15:0-DGDG,,,,,,,listeria
+DGDG(31:0),16:0/15:0-DGDG,,,,,,,listeria
+DGDG(32:0),17:0/15:0-DGDG,,,,,,,listeria
+DGDG(33:0),17:0/16:0-DGDG,,,,,,,listeria
+DGDG(34:0),17:0/17:0-DGDG,,,,,,,listeria
+MGDG(30:0),15:0/15:0-MGDG,,,,,,,listeria
+DGDG(28:0),14:0/14:0-DGDG,,,,,,,streptococcus
+DGDG(30:0),14:0/16:0-DGDG,,,,,,,streptococcus
+DGDG(30:1),14:0/16:1-DGDG,,,,,,,streptococcus
+DGDG(32:0),16:0/16:0-DGDG,,,,,,,streptococcus
+DGDG(32:1),16:0/16:1-DGDG,,,,,,,streptococcus
+DGDG(32:2),16:1/16:1-DGDG,,,,,,,streptococcus
+DGDG(34:3),16:1/18:2-DGDG,,,,,,,streptococcus
+DGDG(34:2),16:1/18:1-DGDG,16:0/18:2-DGDG,,,,,,streptococcus
+DGDG(34:1),16:0/18:1-DGDG,,,,,,,streptococcus
+DGDG(36:4),18:2/18:2-DGDG,,,,,,,streptococcus
+DGDG(36:3),18:1/18:2-DGDG,,,,,,,streptococcus
+DGDG(36:2),18:1/18:1-DGDG,,,,,,,streptococcus
+DGDG(36:1),18:0/18:1-DGDG,,,,,,,streptococcus
+G(h29:0),13:0/Bh16:0-G,,,,,,,bacteroidetes
+G(h30:0),14:0/Bh16:0-G,,,,,,,bacteroidetes
+G(h31:0),15:0/Bh16:0-G,,,,,,,bacteroidetes
+G(h32:0),15:0/Bh17:0-G,,,,,,,bacteroidetes
+S(h29:0),12:0/Bh17:0-S,13:0/Bh16:0-S,,,,,,bacteroidetes
+S(h30:0),13:0/Bh17:0-S,12:0/Bh18:0-S,11:0/Bh19:0-S,,,,,bacteroidetes
+S(h31:0),14:0/Bh17:0-S,,,,,,,bacteroidetes
+S(h32:0),15:0/Bh17:0-S,,,,,,,bacteroidetes
+acyl-GS(27:0),12:0/Bh15:0-GS,13:0/Bh14:0-GS,11:0/Bh16:0-GS ,,,,,bacteroidetes
+acyl-GS(28:0),13:0/Bh15:0-GS,12:0/Bh16:0-GS,14:0/Bh14:0-GS ,,,,,bacteroidetes
+acyl-GS(29:0),13:0/Bh16:0-GS,14:0/Bh15:0-GS,,,,,,bacteroidetes
+acyl-GS(30:0),14:0/Bh16:0-GS,15:0/Bh15:0-GS,13:0/Bh17:0-GS,,,,,bacteroidetes
+acyl-GS(31:0),15:0/Bh16:0-GS,14:0/Bh17:0-GS,,,,,,bacteroidetes
+acyl-GS(32:0),15:0/Bh17:0-GS,16:0/Bh16:0-GS,,,,,,bacteroidetes
+acyl-GS(33:0),16:0/Bh17:0-GS,15:0/Bh18:0-GS,,,,,,bacteroidetes
+Cer(h33:0),d17:0/Bh16:0-Cer,,,,,,,bacteroidetes
+Cer(h34:0),d17:0/Bh17:0-Cer,d18:0/Bh16:0-Cer ,,,,,,bacteroidetes
+Cer(h35:0),d18:0/Bh17:0-Cer,,,,,,,bacteroidetes
+Cer(h36:0),d19:0/Bh17:0-Cer,,,,,,,bacteroidetes
+Cer-1-P(h34:0),d17:0/Bh17:0-Cer-1-P,d18:0/Bh16:0-Cer-1-P,,,,,,bacteroidetes
+Cer-1-P(h35:0),d18:0/Bh17:0-Cer-1-P,d19:0/Bh16:0-Cer-1-P,,,,,,bacteroidetes
+Cer-1-P(h36:0),d19:0/Bh17:0-Cer-1-P,,,,,,,bacteroidetes
+Cer-1-P(h37:0),d20:0/Bh17:0-Cer-1-P,,,,,,,bacteroidetes
+PE(P-26:0),p13:0/13:0-PE,,,,,,,bacteroidetes
+PE(P-27:0),p14:0/13:0-PE,p15:0/12:0-PE,,,,,,bacteroidetes
+PE(P-28:0),p15:0/13:0-PE,p13:0/15:0-PE,p16:0/12:0-PE,p14:0/14:0-PE,,,,bacteroidetes
+PE(P-29:0),p14:0/15:0-PE,p16:0/13:0-PE,p15:0/14:0-PE,,,,,bacteroidetes
+PE(P-30:0),p15:0/15:0-PE,p16:0/14:0-PE,,,,,,bacteroidetes
+PE(P-31:0),p16:0/15:0-PE,,,,,,,bacteroidetes
+PE(25:0),12:0/13:0-PE,,,,,,,bacteroidetes
+PE(26:0),13:0/13:0-PE,,,,,,,bacteroidetes
+PE(27:0),14:0/13:0-PE,15:0/12:0-PE,,,,,,bacteroidetes
+PE(28:0),15:0/13:0-PE,14:0/14:0-PE,16:0/12:0-PE,,,,,bacteroidetes
+PE(29:0),14:0/15:0-PE,16:0/13:0-PE,,,,,,bacteroidetes
+PE(30:0),15:0/15:0-PE,16:0/14:0-PE,,,,,,bacteroidetes
+PE(31:0),16:0/15:0-PE,,,,,,,bacteroidetes
+PS(28:0),15:0/13:0-PS,,,,,,,bacteroidetes
+PS(29:0),14:0/15:0-PS,16:0/13:0-PS,,,,,,bacteroidetes
+PS(30:0),15:0/15:0-PS,,,,,,,bacteroidetes
+PS(31:0),16:0/15:0-PS,,,,,,,bacteroidetes
+PI(26:0),13:0/13:0-PI,,,,,,,bacteroidetes
+PI(27:0),14:0/13:0-PI,12:0/15:0-PI,,,,,,bacteroidetes
+PI(28:0),15:0/13:0-PI,14:0/14:0-PI,,,,,,bacteroidetes
+PI(29:0),14:0/15:0-PI,16:0/13:0-PI,,,,,,bacteroidetes
+PI(30:0),15:0/15:0-PI,,,,,,,bacteroidetes
+PI(31:0),16:0/15:0-PI,,,,,,,bacteroidetes
+PI(32:0),16:0/16:0-PI,,,,,,,bacteroidetes
+EPC(h31:0),d14:0/Bh17:0-EPCer,,,,,,,bacteroidetes
+EPC(h32:0),d15:0/Bh17:0-EPCer,,,,,,,bacteroidetes
+EPC(h33:0),d17:0/Bh16:0-EPCer,,,,,,,bacteroidetes
+EPC(h34:0),d17:0/Bh17:0-EPCer,d18:0/Bh16:0-EPCer,,,,,,bacteroidetes
+EPC(h35:0),d18:0/Bh17:0-EPCer,d19:0/Bh16:0-EPCer,,,,,,bacteroidetes
+EPC(h36:0),d19:0/Bh17:0-EPCer,,,,,,,bacteroidetes
+SPC(h33:0),d17:0/Bh16:0-SPC,,,,,,,bacteroidetes
+SPC(h34:0),d17:0/Bh17:0-SPC,d18:0/Bh16:0-SPC,,,,,,bacteroidetes
+SPC(h35:0),d18:0/Bh17:0-SPC,,,,,,,bacteroidetes
+IPC(h31:0),d15:0/Bh16:0-IPC,d16:0/Bh15:0-IPC,d14:0/Bh17:0-IPC,d12:0/Bh19:0-IPC,d17:0/Bh14:0-IPC,d13:0/Bh18:0-IPC,,bacteroidetes
+IPC(h32:0),d16:0/Bh16:0-IPC,d17:0/Bh15:0-IPC,,,,,,bacteroidetes
+IPC(h33:0),d17:0/Bh16:0-IPC,,,,,,,bacteroidetes
+IPC(h34:0),d18:0/Bh16:0-IPC,d17:0/Bh17:0-IPC,,,,,,bacteroidetes
+IPC(h35:0),d18:0/Bh17:0-IPC,,,,,,,bacteroidetes
+IPC(h36:0),d19:0/Bh17:0-IPC,,,,,,,bacteroidetes
+acyl-GS-PA(h55:0),13:0/Bh16:0-GS-13:0/13:0-PA,,,,,,,bacteroidetes
+acyl-GS-PA(h56:0),13:0/Bh16:0-GS-14:0/13:0-PA,14:0/Bh16:0-GS-13:0/13:0-PA,,,,,,bacteroidetes
+acyl-GS-PA(h57:0),15:0/Bh16:0-GS-13:0/13:0-PA,15:0/Bh15:0-GS-14:0/13:0-PA,,,,,,bacteroidetes
+acyl-GS-PA(h58:0),15:0/Bh16:0-GS-14:0/13:0-PA,14:0/Bh16:0-GS-15:0/13:0-PA,13:0/Bh16:0-GS-14:0/15:0-PA,,,,,bacteroidetes
+acyl-GS-PA(h59:0),15:0/Bh16:0-GS-15:0/13:0-PA,14:0/Bh16:0-GS-14:0/15:0-PA,15:0/Bh17:0-GS-14:0/13:0-PA,,,,,bacteroidetes
+acyl-GS-PA(h60:0),15:0/Bh16:0-GS-14:0/15:0-PA,14:0/Bh16:0-GS-15:0/15:0-PA,15:0/Bh17:0-GS-15:0/13:0-PA,,,,,bacteroidetes
+acyl-GS-PA(h61:0),15:0/Bh16:0-GS-15:0/15:0-PA,16:0/Bh16:0-GS-14:0/15:0-PA,,,,,,bacteroidetes
+acyl-GS-PA(h62:0),15:0/Bh17:0-GS-15:0/15:0-PA,15:0/Bh16:0-GS-16:0/15:0-PA,,,,,,bacteroidetes
+"GS-PDHC(h2,49:0)",Bh16:0-GS-d16:0/Bh17:0-PDHC,,,,,,,bacteroidetes
+"GS-PDHC(h2,50:0)",Bh16:0-GS-d17:0/Bh17:0-PDHC,,,,,,,bacteroidetes
+"GS-PDHC(h2,51:0)",Bh16:0-GS-d18:0/Bh17:0-PDHC,Bh17:0-GS-d17:0/Bh17:0-PDHC,,,,,,bacteroidetes
+"GS-PDHC(h2,61:0)",14:0/Bh15:0-GS-d15:0/Bh17:0-PDHC,13:0/Bh15:0-GS-d16:0/Bh17:0-PDHC,,,,,,bacteroidetes
+"GS-PDHC(h2,62:0)",15:0/Bh16:0-GS-d15:0/Bh16:0-PDHC,14:0/Bh16:0-GS-d16:0/Bh16:0-PDHC,,,,,,bacteroidetes
+"GS-PDHC(h2,63:0)",15:0/Bh16:0-GS-d15:0/Bh17:0-PDHC,15:0/Bh16:0-GS-d16:0/Bh16:0-PDHC,14:0/Bh16:0-GS-d17:0/Bh16:0-PDHC,,,,,bacteroidetes
+"GS-PDHC(h2,64:0)",15:0/Bh16:0-GS-d16:0/Bh17:0-PDHC,14:0/Bh16:0-GS-d17:0/Bh17:0-PDHC,,,,,,bacteroidetes
+"GS-PDHC(h2,65:0)",15:0/Bh16:0-GS-d17:0/Bh17:0-PDHC,,,,,,,bacteroidetes
+"GS-PDHC(h2,66:0)",15:0/Bh16:0-GS-d18:0/Bh17:0-PDHC,15:0/Bh17:0-GS-d17:0/Bh17:0-PDHC,15:0/Bh17:0-GS-d17:0/Bh17:0-PDHC,,,,,bacteroidetes
+"GS-PDHC(h2,67:0)",15:0/Bh17:0-GS-d18:0/Bh17:0-PDHC,15:0/Bh16:0-GS-d19:0/Bh17:0-PDHC,,,,,,bacteroidetes
+"GS-PDHC(h2,68:0)",15:0/Bh17:0-GS-d19:0/Bh17:0-PDHC,,,,,,,bacteroidetes
+GalCer(33:0),d17:0/Bh16:0-GalCer,d16:0/Bh17:0-GalCer,,,,,,bacteroidetes
+GalCer(34:0),d17:0/Bh17:0-GalCer,,,,,,,bacteroidetes
+GalCer(35:0),d18:0/Bh17:0-GalCer,,,,,,,bacteroidetes
+GalCer(36:0),d19:0/Bh17:0-GalCer,,,,,,,bacteroidetes
+"DHC-PIP-DHC(h2,66:0)",d17:0/h16:0-PIP-d17:0/h16:0,,,,,,,bacteroidetes
+"DHC-PIP-DHC(h2,67:0)",d18:0/h16:0-PIP-d17:0/h16:0,d17:0/h17:0-PIP-d17:0/h16:0,,,,,,bacteroidetes
+"DHC-PIP-DHC(h2,68:0)",d18:0/h16:0-PIP-d18:0/h16:0,,,,,,,bacteroidetes
+"DHC-PIP-DHC(h2,69:0)",d19:0/h16:0-PIP-d18:0/h16:0,,,,,,,bacteroidetes
+Cer(h33:0),d17:0/Bh16:0-Cer,,,,,,,p.gingivalis
+Cer(h34:0),d17:0/Bh17:0-Cer,d18:0/Bh16:0-Cer ,,,,,,p.gingivalis
+Cer(h35:0),d18:0/Bh17:0-Cer,,,,,,,p.gingivalis
+Cer(h36:0),d19:0/Bh17:0-Cer,,,,,,,p.gingivalis
+PE(26:0),11:0/15:0-PE,,,,,,,p.gingivalis
+PE(27:0),12:0/15:0-PE,,,,,,,p.gingivalis
+PE(28:0),15:0/13:0-PE,14:0/14:0-PE,,,,,,p.gingivalis
+PE(29:0),14:0/15:0-PE,16:0/13:0-PE,,,,,,p.gingivalis
+PE(30:0),15:0/15:0-PE,,,,,,,p.gingivalis
+PE(31:0),16:0/15:0-PE,,,,,,,p.gingivalis
+PE(32:0),17:0/15:0-PE,16:0/16:0-PE,,,,,,p.gingivalis
+PE(33:0),18:0/15:0-PE,17:0/16:0-PE,,,,,,p.gingivalis
+PS(27:0),14:0/13:0-PS,,,,,,,p.gingivalis
+PS(28:0),15:0/13:0-PS,,,,,,,p.gingivalis
+PS(29:0),14:0/15:0-PS,16:0/13:0-PS,,,,,,p.gingivalis
+PS(30:0),15:0/15:0-PS,,,,,,,p.gingivalis
+PS(31:0),16:0/15:0-PS,,,,,,,p.gingivalis
+G(h30:0),15:0-Bh15:0-G,,,,,,,p.gingivalis
+G(h31:0),15:0-Bh16:0-G,,,,,,,p.gingivalis
+G(h32:0),15:0-Bh17:0-G,,,,,,,p.gingivalis
+S(h31:0),15:0-Bh16:0-S,,,,,,,p.gingivalis
+S(h32:0),15:0-Bh17:0-S,,,,,,,p.gingivalis
+GS(16:0),Bh16:0-GS,,,,,,,p.gingivalis
+GS(17:0),Bh17:0-GS,,,,,,,p.gingivalis
+acyl-GS(30:0),13:0-Bh17:0-GS,14:0/Bh16:0-GS,15:0/Bh15:0-GS,,,,,p.gingivalis
+acyl-GS(31:0),15:0-Bh16:0-GS,14:0/Bh17:0-GS,,,,,,p.gingivalis
+acyl-GS(32:0),15:0-Bh17:0-GS,,,,,,,p.gingivalis
+acyl-GS(33:0),16:0-Bh17:0-GS,15:0/Bh18:0-GS,,,,,,p.gingivalis
+Cer-1-P(h34:0),d17:0/Bh17:0-Cer-1-P,d18:0/Bh16:0-Cer-1-P,,,,,,p.gingivalis
+Cer-1-P(h35:0),d18:0/Bh17:0-Cer-1-P,d19:0/Bh16:0-Cer-1-P,,,,,,p.gingivalis
+Cer-1-P(h36:0),d19:0/Bh17:0-Cer-1-P,,,,,,,p.gingivalis
+Cer-1-P(h37:0),d20:0/Bh17:0-Cer-1-P,,,,,,,p.gingivalis
+SPC(h35:0),d18:0/Bh17:0-SPC,,,,,,,p.gingivalis
+SPC(h36:0),d19:0/Bh17:0-SPC,,,,,,,p.gingivalis
+EPC(h30:0),d13:0/Bh17:0-EPC,,,,,,,p.gingivalis
+EPC(h31:0),d14:0/Bh17:0-EPC,,,,,,,p.gingivalis
+EPC(h32:0),d15:0/Bh17:0-EPC,,,,,,,p.gingivalis
+EPC(h33:0),d17:0/Bh16:0-EPC,d18:0/Bh15:0-EPC,d16:0/Bh17:0-EPC,,,,,p.gingivalis
+EPC(h34:0),d18:0/Bh16:0-EPC,d17:0/Bh17:0-EPC,,,,,,p.gingivalis
+EPC(h35:0),d18:0/Bh17:0-EPC,d19:0/Bh16:0-EPC,,,,,,p.gingivalis
+EPC(h36:0),d19:0/Bh17:0-EPC,,,,,,,p.gingivalis
+EPC(h37:0),d21:0/Bh16:0-EPC,,,,,,,p.gingivalis
+EPC(h36:4),d20:4/Bh16:0-EPC,,,,,,,p.gingivalis
+EPC(h37:4),d20:4/Bh17:0-EPC,,,,,,,p.gingivalis
+acyl-EPC(h49:0),d17:0/15:0-Bh17:0-EPC,d18:0/15:0-Bh16:0-EPC,d19:0/15:0-Bh15:0-EPC,,,,,p.gingivalis
+acyl-EPC(h50:0),d18:0/15:0-Bh17:0-EPC,,,,,,,p.gingivalis
+acyl-EPC(h51:0),d19:0/15:0-Bh17:0-EPC,,,,,,,p.gingivalis
+GPC(h33:0),d16:0/Bh17:0-GPC,d17:0/Bh16:0-GPC,d18:0/Bh15:0-GPC,,,,,p.gingivalis
+GPC(h34:0),d17:0/Bh17:0-GPC,d18:0/Bh16:0-GPC,,,,,,p.gingivalis
+GPC(h35:0),d18:0/Bh17:0-GPC,d19:0/Bh16:0-GPC,,,,,,p.gingivalis
+GPC(h36:0),d19:0/Bh17:0-GPC,,,,,,,p.gingivalis
+GPC(h37:0),d20:0/Bh17:0-GPC,,,,,,,p.gingivalis
+GPC(h35:4),d20:4/Bh15:0-GPC,,,,,,,p.gingivalis
+GPC(h36:4),d20:4/Bh16:0-GPC,,,,,,,p.gingivalis
+GPC(h37:4),d20:4/Bh17:0-GPC,,,,,,,p.gingivalis
+acyl-GPC(h45:0),15:0-d15:0/Bh15:0-GPC,15:0-d17:0/Bh13:0-GPC,,,,,,p.gingivalis
+acyl-GPC(h46:0),15:0-d15:0/Bh16:0-GPC,15:0-d17:0/Bh14:0-GPC,15:0-d16:0/Bh15:0-GPC,14:0-d15:0/Bh17:0-GPC,14:0-d16:0/Bh17:0-GPC,,,p.gingivalis
+acyl-GPC(h47:0),15:0-d15:0/Bh17:0-GPC,15:0-d17:0/Bh15:0-GPC,15:0-d18:0/Bh14:0-GPC,15:0-d16:0/Bh16:0-GPC,d19:0/14:0-Bh16:0-GPC,,,p.gingivalis
+acyl-GPC(h48:0),d18:0/15:0-Bh15:0-GPC,d17:0/15:0-Bh16:0-GPC,d16:0/15:0-Bh17:0-GPC,d17:0/14:0-Bh17:0-GPC,,,,p.gingivalis
+acyl-GPC(h49:0),d17:0/15:0-Bh17:0-GPC,d18:0/15:0-Bh16:0-GPC,d19:0/15:0-Bh15:0-GPC,d18:0/14:0-Bh17:0-GPC,,,,p.gingivalis
+acyl-GPC(h50:0),d18:0/15:0-Bh17:0-GPC,d19:0/15:0-Bh16:0-GPC,d17:0/15:0-Bh18:0-GPC,d20:0/15:0-Bh15:0-GPC,,,,p.gingivalis
+acyl-GPC(h51:0),d19:0/15:0-Bh17:0-GPC,,,,,,,p.gingivalis
+acyl-GPC(h52:0),d20:0/15:0-Bh17:0-GPC,d21:0/15:0-Bh16:0-GPC,,,,,,p.gingivalis
+acyl-GPC(h50:4),d20:4/15:0-Bh15:0-GPC,,,,,,,p.gingivalis
+acyl-GPC(h51:4),d20:4/15:0-Bh16:0-GPC,d20:4/14:0-Bh17:0-GPC,,,,,,p.gingivalis
+acyl-GPC(h52:4),d20:4/15:0-Bh17:0-GPC,,,,,,,p.gingivalis
+acyl-GPC(h54:4),d22:4/15:0-Bh17:0-GPC,d19:0/18:4-Bh17:0-GPC,,,,,,p.gingivalis
+GS-PA(h47:0),Bh17:0-GS-15:0/15:0-PA,,,,,,,p.gingivalis
+GS-PA(h50:1),Bh17:0-GS-18:1/15:0-PA,,,,,,,p.gingivalis
+acyl-GS-PA(h57:0),15:0/Bh16:0-GS-13:0/13:0-PA,15:0/Bh15:0-GS-14:0/13:0-PA,,,,,,p.gingivalis
+acyl-GS-PA(h58:0),15:0/Bh16:0-GS-14:0/13:0-PA,14:0/Bh16:0-GS-15:0/13:0-PA,13:0/Bh16:0-GS-14:0/15:0-PA,,,,,p.gingivalis
+acyl-GS-PA(h59:0),15:0/Bh16:0-GS-15:0/13:0-PA,14:0/Bh16:0-GS-14:0/15:0-PA,15:0/Bh17:0-GS-14:0/13:0-PA,,,,,p.gingivalis
+acyl-GS-PA(h60:0),15:0/Bh16:0-GS-14:0/15:0-PA,14:0/Bh16:0-GS-15:0/15:0-PA,15:0/Bh17:0-GS-15:0/13:0-PA,,,,,p.gingivalis
+acyl-GS-PA(h61:0),15:0/Bh16:0-GS-15:0/15:0-PA,16:0/Bh16:0-GS-14:0/15:0-PA,,,,,,p.gingivalis
+acyl-GS-PA(h62:0),15:0/Bh17:0-GS-15:0/15:0-PA,15:0/Bh16:0-GS-16:0/15:0-PA,,,,,,p.gingivalis
+acyl-GS-PA(h64:1),15:0/Bh16:0-GS-15:0/18:1-PA,,,,,,,p.gingivalis
+acyl-GS-PA(h65:1),15:0/Bh17:0-GS-15:0/18:1-PA,,,,,,,p.gingivalis
+acyl-GS-PA(h64:2),15:0/Bh16:0-GS-15:0/18:2-PA,,,,,,,p.gingivalis
+acyl-GS-PA(h65:2),15:0/Bh17:0-GS-15:0/18:2-PA,,,,,,,p.gingivalis
+acyl-GS-PA(h64:3),15:0/Bh17:0-GS-14:0/18:3-PA,15:0/Bh16:0-GS-15:0/18:3-PA,,,,,,p.gingivalis
+acyl-GS-PA(h65:3),15:0/Bh17:0-GS-15:0/18:3-PA,,,,,,,p.gingivalis
+acyl-GS-PA(h65:4),15:0/Bh17:0-GS-18:4/15:0-PA,,,,,,,p.gingivalis
+acyl-GS-PA(h66:4),15:0/Bh16:0-GS-15:0/20:4-PA,,,,,,,p.gingivalis
+acyl-GS-PA(h67:4),15:0/Bh17:0-GS-15:0/20:4-PA,,,,,,,p.gingivalis
+acyl-GS-PA(h67:5),15:0/Bh17:0-GS-15:0/20:5-PA,,,,,,,p.gingivalis
+acyl-GS-PA(h68:5),15:0/Bh17:0-GS-18:4/18:1-PA,15:0/Bh17:0-GS-16:0/20:5-PA,15:0/Bh16:0-GS-15:0/22:5-PA,,,,,p.gingivalis
+"Cer-PGP-Cer(h2,69:0)",d18:0/Bh17:0-DHC-PGP-d17:0/Bh17:0,d19:0/Bh17:0-DHC-P-G-P-d18:0/Bh15:0,d19:0/Bh17:0-DHC-P-G-P-d17:0/Bh16:0,,,,,p.gingivalis
+"Cer-PGP-Cer(h2,70:0)",d18:0/Bh17:0-DHC-PGP-d18:0/Bh17:0,d19:0/Bh17:0-DHC-P-G-P-d17:0/Bh17:0,d19:0/Bh17:0-DHC-P-G-P-d18:0/Bh16:0,,,,,p.gingivalis
+"Cer-PGP-Cer(h2,71:0)",d19:0/Bh17:0-DHC-PGP-d18:0/Bh17:0,,,,,,,p.gingivalis
+"Cer-PGP-Cer(h2,72:0)",d19:0/Bh17:0-DHC-PGP-d19:0/Bh17:0,d20:0/Bh17:0-DHC-P-G-P-d18:0/Bh17:0,,,,,,p.gingivalis
+"Cer-PGP-Cer(h2,72:4)",d18:0/Bh17:0-DHC-PGP-d20:4/Bh17:0,,,,,,,p.gingivalis
+"Cer-PGP-Cer(h2,73:4)",d19:0/Bh17:0-DHC-P-G-P-d20:4/Bh17:0,,,,,,,p.gingivalis
+"acyl-Cer-PGP-Cer(h2,85:0)",d18:0/Bh17:0-DHC-PGP-d18:0/15:0-Bh17:0,,,,,,,p.gingivalis
+"acyl-Cer-PGP-Cer(h2,86:0)",d19:0/Bh17:0-DHC-PGP-d18:0/15:0-Bh17:0,,,,,,,p.gingivalis
+"acyl-Cer-PGP-Cer(h2,86:4)",d20:4/Bh17:0-DHC-PGP-d18:0/15:0-Bh17:0,,,,,,,p.gingivalis
+acyl-Cer-1-P(h49:0),d17:0/15:0-Bh17:0-Cer-1-P,d18:0/15:0-Bh16:0-Cer-1-P,,,,,,p.gingivalis
+acyl-Cer-1-P(h50:0),d18:0/15:0-Bh17:0-Cer-1-P,,,,,,,p.gingivalis
+acyl-GS-PG(h32:0),15:0-Bh17:0-GS-PG,,,,,,,p.gingivalis
+PC(34:0),16:0/18:0-PC,,,,,,,
+PC(40:5),18:0/22:5-PC,,,,,,,
+Sulf(34:1),d18:1/16:0-Sulf,,,,,,,
+Sulf(h34:1),d18:1/ah16:0-Sulf,,,,,,,
+Sulf(36:1),d18:1/18:0-Sulf,,,,,,,
+Sulf(h36:2),d18:1/ah18:1-Sulf,,,,,,,
+Sulf(38:2),d18:1/20:1-Sulf,,,,,,,
+Sulf(40:2),d18:1/22:1-Sulf,,,,,,,
+Sulf(41:2),d18:1/23:1-Sulf,,,,,,,
+Sulf(41:1),d18:1/23:0-Sulf,,,,,,,
+Sulf(42:2),d18:1/24:1-Sulf,,,,,,,
+Sulf(h41:1),d18:1/ah23:0-Sulf,,,,,,,
+Sulf(h42:3),d18:1/ah24:2-Sulf,,,,,,,
+Sulf(43:2),d18:1/25:1-Sulf,,,,,,,
+Sulf(h42:2),d18:1/ah24:1-Sulf,,,,,,,
+Sulf(h42:1),d18:1/ah24:0-Sulf,,,,,,,
+Sulf(44:3),d18:1/26:2-Sulf,,,,,,,
+Sulf(44:2),d18:1/26:1-Sulf,,,,,,,
+Sulf(h43:1),d18:1/ah25:0-Sulf,,,,,,,
+Sulf(45:2),d19:1/26:1-Sulf,,,,,,,
+Sulf(h44:2),d18:1/ah26:1-Sulf,,,,,,,
+Sulf(46:2),d20:1/26:1-Sulf,,,,,,,
+Sulf(h36:1),d18:1/ah18:0-Sulf,,,,,,,
+Sulf(38:1),d18:1/20:0-Sulf,,,,,,,
+Sulf(40:1),d18:1/22:0-Sulf,,,,,,,
+Sulf(h40:1),d18:1/ah22:0-Sulf,,,,,,,
+Sulf(42:3),d18:1/24:2-Sulf,d18:2/24:1-Sulf,,,,,,
+Sulf(h45:2),d19:1/ah26:1-Sulf,,,,,,,
